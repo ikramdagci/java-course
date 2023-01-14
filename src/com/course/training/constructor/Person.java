@@ -27,7 +27,7 @@ public class Person {
     }
 
     public void printInfo(){
-        System.out.println("Person { Name:" + this.fullName + ", Age:" + this.age + "}");
+        System.out.println("Person [ Name:" + this.fullName + ", Age:" + this.age + " ]");
     }
 
 
