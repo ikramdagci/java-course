@@ -5,7 +5,7 @@ public class MyMath {
     public static final double PI; // read-only
 
     static {
-        PI = 3.14;
+        PI = Math.PI;
     }
 
     public static int sum(int a,int b){
