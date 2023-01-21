@@ -2,6 +2,9 @@ package com.course.reusability.domain.school;
 
 import com.course.reusability.domain.people.Student;
 import com.course.reusability.domain.people.Teacher;
+import com.course.training.array.ArrayUtils;
+
+import java.util.Arrays;
 
 public class Classroom {
 
@@ -12,12 +15,6 @@ public class Classroom {
     private int capacity;
     private int index;
 
-    /*
-    1 null 3 4 5
-    //1 null 3 4 5 6
-    1,3,4,5,null , index--
-    1,3,4,5,6
-    */
 
     public Classroom(Teacher teacher, int capacity) {
         this.teacher = teacher;
@@ -27,23 +24,51 @@ public class Classroom {
     }
 
     public void addStudent(Student newStudent) {
-        if (index < capacity) {
-            students[index++] = newStudent;
-        } else {
-            System.out.println("Error, capacity is full");
-        }
+        ensureCapacity();
+        students[index++] = newStudent;
+
     }
 
-    public void printTeacherInfo(){
+    public void deleteStudent(int index) {
+        this.students[index] = null;
+    }
+
+    private void ensureCapacity() {
+        System.out.println("Checking capacity: index = " + index + "; capacity= " + capacity);
+        if (index >= capacity) {
+            int newCapacity = capacity + (capacity >> 1);
+            System.out.println("Capacity is growing: new capacity: " + newCapacity);
+            grow(newCapacity);
+        }
+
+    }
+
+    private void grow(int newCapacity) {
+        Student[] students1 = new Student[newCapacity];
+        System.out.println("New larger array created with capacity: " + newCapacity);
+        System.out.println(Arrays.toString(students1));
+
+        for (int i = 0; i < students.length; i++) {
+            students1[i] = students[i];
+        }
+        System.out.println(Arrays.toString(students1));
+        this.students = students1;
+        this.capacity = newCapacity;
+    }
+
+    public void printTeacherInfo() {
         System.out.println("Printing teachers info...");
         teacher.printInfo();
     }
 
-    public void printStudentsInfo(){
+    public void printStudentsInfo() {
         System.out.println("Printing students info...");
         for (int i = 0; i < index; i++) {
             Student student = students[i];
-            student.printInfo();
+            if (student != null) {
+                student.printInfo();
+            }
+
         }
 
     }
