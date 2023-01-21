@@ -12,6 +12,12 @@ public class Classroom {
     private int capacity;
     private int index;
 
+    /*
+    1 null 3 4 5
+    //1 null 3 4 5 6
+    1,3,4,5,null , index--
+    1,3,4,5,6
+    */
 
     public Classroom(Teacher teacher, int capacity) {
         this.teacher = teacher;
