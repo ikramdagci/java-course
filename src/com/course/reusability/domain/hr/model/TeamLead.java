@@ -5,4 +5,9 @@ public class TeamLead extends Engineer {
         super(fullName, phoneNumber, salary, department, team, branch);
         System.out.println("TeamLead");
     }
+
+    public void manageTeam(){
+        System.out.println("Managing team");
+    }
+
 }

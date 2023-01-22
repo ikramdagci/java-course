@@ -16,7 +16,11 @@ public class Person {
     }
 
     public void printInfo(){
-        System.out.println("Full Name : "+fullName + ", Gender : " + gender + ", Address : " + address );
+        System.out.println(this.toString());
     }
 
+    @Override
+    public String toString() {
+        return "Full Name : "+fullName + ", Gender : " + gender + ", Address : " + address;
+    }
 }

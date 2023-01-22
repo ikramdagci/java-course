@@ -12,4 +12,9 @@ public class Employee {
         this.salary = salary;
         System.out.println("Employee");
     }
+
+    public void work(){
+        System.out.println("Employee is working...");
+    }
+
 }

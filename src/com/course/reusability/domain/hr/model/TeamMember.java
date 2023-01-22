@@ -12,5 +12,9 @@ public class TeamMember extends Employee{
         System.out.println("TeamMember");
     }
 
+    public void planning(){
+        System.out.println("Planning meeting");
+    }
+
 
 }
