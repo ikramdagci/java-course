@@ -1,5 +1,7 @@
 package com.course.polymorphism.domain;
 
+import com.course.abstraction.util.AreaUtil;
+
 public class Circle extends Shape {
 
     private double radius;
@@ -12,7 +14,12 @@ public class Circle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Drawing a circle...");
+        System.out.println("O");
+    }
+
+    @Override
+    public void calculateArea() {
+        super.area = AreaUtil.calculateCircleArea(radius);
     }
 
     @Override

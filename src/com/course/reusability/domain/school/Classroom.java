@@ -2,7 +2,6 @@ package com.course.reusability.domain.school;
 
 import com.course.reusability.domain.people.Student;
 import com.course.reusability.domain.people.Teacher;
-import com.course.training.array.ArrayUtils;
 
 import java.util.Arrays;
 

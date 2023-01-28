@@ -3,7 +3,10 @@ package com.course.polymorphism.main;
 import com.course.polymorphism.domain.Canvas;
 import com.course.polymorphism.domain.Circle;
 import com.course.polymorphism.domain.Rectangle;
+import com.course.polymorphism.domain.Shape;
 import com.course.reusability.domain.hr.model.*;
+
+import java.util.Arrays;
 
 public class DriverUpcasting {
 
@@ -18,10 +21,24 @@ public class DriverUpcasting {
         Circle circle = new Circle("Black",3.0);
         Rectangle rectangle = new Rectangle("Black", 1, 2);
 
+        Shape shape = circle;
+
+        // Shape shape1 = new Shape("Black"); abstract class - cannot instantiate
+        //shape1.draw();
+
+
+
 
         Canvas canvas = new Canvas();
-        canvas.drawShape(circle);
-        canvas.drawShape(rectangle);
+        //canvas.drawShape(shape);
+        //canvas.drawShape(rectangle);
+
+        //canvas.drawCircle(circle);
+
+        canvas.draw(shape);
+
+
+        Arrays.toString(new Circle[2]);
 
 
     }

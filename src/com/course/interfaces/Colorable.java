@@ -1,2 +1,7 @@
-package com.course.interfaces;public interface Colorable {
+package com.course.interfaces;
+
+public interface Colorable {
+
+    void setColor(String color);
+
 }

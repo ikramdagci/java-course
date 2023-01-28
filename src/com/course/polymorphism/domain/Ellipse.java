@@ -1,10 +1,12 @@
 package com.course.polymorphism.domain;
 
-public class Oval extends Shape {
+import com.course.abstraction.util.AreaUtil;
+
+public class Ellipse extends Shape {
 
     int a;
     int b;
-    public Oval(String color,int a,int b) {
+    public Ellipse(String color, int a, int b) {
         super(color);
         this.a = a;
         this.b = b;
@@ -17,6 +19,7 @@ public class Oval extends Shape {
 
     @Override
     public void calculateArea() {
-
+        super.area = AreaUtil.calculateEllipseArea(a,b);
     }
+
 }

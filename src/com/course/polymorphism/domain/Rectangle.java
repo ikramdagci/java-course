@@ -13,7 +13,12 @@ public class Rectangle extends Shape{
 
     @Override
     public void draw() {
-        System.out.println("Drawing a rectangle..");
+        System.out.println("[]");
+    }
+
+    @Override
+    public void calculateArea() {
+        super.area = this.getX() * this.getY();
     }
 
     public int getX() {

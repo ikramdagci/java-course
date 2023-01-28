@@ -1,2 +1,4 @@
-package com.course.interfaces.main;public class Driver {
+package com.course.interfaces.main;
+
+public class Driver {
 }

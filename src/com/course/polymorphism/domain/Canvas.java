@@ -5,16 +5,16 @@ public class Canvas {
     public void drawTriangle(Triangle triangle){
         triangle.draw();
     }
-
-    public void drawCircle(Circle circle) {
+*/
+    public void draw(Circle circle) {
         circle.draw();
     }
-
+/*
     public void drawRectangle(Rectangle rectangle) {
         rectangle.draw();
     }*/
 
-    public void drawShape(Shape shape) {
+    public void draw(Shape shape) {
         shape.draw(); // polymorphic call
         shape.calculateArea();
 
