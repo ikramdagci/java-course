@@ -1,6 +1,6 @@
 package com.course.interfaces.ext;
 
-public interface Swimable {
+public interface Swimmable {
 
     void swim();
 

@@ -9,4 +9,9 @@ public class Engineer extends TeamMember {
         this.branch = branch;
         System.out.println("Engineer");
     }
+
+    void printName(){
+        String fullName = super.fullName;
+    }
+
 }

@@ -2,7 +2,7 @@ package com.course.reusability.domain.hr.model;
 
 public class Employee {
 
-    private String fullName;
+    protected String fullName;
     private String phoneNumber;
     private double salary;
 
@@ -16,5 +16,6 @@ public class Employee {
     public void work(){
         System.out.println("Employee is working...");
     }
+
 
 }

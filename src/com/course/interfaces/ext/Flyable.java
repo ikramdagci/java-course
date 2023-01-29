@@ -1,2 +1,7 @@
-package com.course.interfaces.ext;public interface Flyable {
+package com.course.interfaces.ext;
+
+public interface Flyable {
+
+    void fly();
+
 }
