@@ -14,7 +14,17 @@ public class Circle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("O");
+        int radius = (int)this.radius;
+        for (int y = -radius; y <= radius; y++) {
+            for (int x = -radius; x <= radius; x++) {
+                if (x * x + y * y <= radius * radius) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
     }
 
     @Override

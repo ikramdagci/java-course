@@ -18,7 +18,7 @@ public class DriverUpcasting {
     }
 
     private static void test2() {
-        Circle circle = new Circle("Black",3.0);
+        Circle circle = new Circle("Black",10.0);
         Rectangle rectangle = new Rectangle("Black", 1, 2);
 
         Shape shape = circle;
