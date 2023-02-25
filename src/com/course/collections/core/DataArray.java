@@ -41,10 +41,9 @@ public class DataArray<T> {
     //* _ * *
     private void arrange(int index) {
         for(int i = index;i < this.objects.length - 1;i++){
-            this.objects[ i] = this.objects[i+1];
+            this.objects[i] = this.objects[i+1];
         }
         this.objects[this.objects.length - 1] = null;
-
 
     }
 
