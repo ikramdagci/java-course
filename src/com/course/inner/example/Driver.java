@@ -12,26 +12,34 @@ public class Driver {
         sequence.add(5);
         sequence.add("John");
         sequence.add("Doe");
-        sequence.add(new Circle("Black",2.0));
+        Circle black = new Circle("Black", 2.0);
+        sequence.add(black);
 
 
         Iterator iterator = sequence.getIterator();
+        Iterator iterator1 = sequence.getReverseIterator();
 
-        while(!iterator.end()){
-            Object current = iterator.current();
-            System.out.println("Current : " + current.toString());
-            iterator.next();
-        }
+        Driver.printAllElements(iterator1);
 
-        Iterator iterator1 = sequence.getIterator();
+
+
+        /*Iterator iterator1 = sequence.getIterator();
 
         while(!iterator1.end()){
             Object current = iterator1.current();
             System.out.println("Current : " + current.toString());
             iterator1.next();
-        }
+        }*/
 
 
     }
+    public static void printAllElements(Iterator iterator){
+        while(!iterator.end()){
+            Object current = iterator.current();
+            System.out.println("Current : " + current.toString());
+            iterator.next();
+        }
+    }
+
 
 }

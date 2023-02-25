@@ -25,7 +25,6 @@ public class Classroom {
     public void addStudent(Student newStudent) {
         ensureCapacity();
         students[index++] = newStudent;
-
     }
 
     public void deleteStudent(int index) {

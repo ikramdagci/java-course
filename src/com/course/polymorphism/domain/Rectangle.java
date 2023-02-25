@@ -28,4 +28,9 @@ public class Rectangle extends Shape{
     public int getY() {
         return y;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle";
+    }
 }

@@ -22,4 +22,8 @@ public class Ellipse extends Shape {
         super.area = AreaUtil.calculateEllipseArea(a,b);
     }
 
+    @Override
+    public String toString() {
+        return "Ellipse";
+    }
 }
