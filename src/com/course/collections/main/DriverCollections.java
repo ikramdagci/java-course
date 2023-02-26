@@ -23,7 +23,50 @@ public class DriverCollections {
         //test4();
 //        remove(1);
 //        test5();
-        test6();
+//        test6();
+//        testIterator();
+
+    }
+
+    public static void testIterator(){
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("A");
+        arrayList.add("B");
+        arrayList.add("C");
+        arrayList.add("D");
+
+        Iterator<String> iterator = arrayList.iterator();
+        //String next = iterator.next();
+        //System.out.println(next);
+        System.out.print("Iterator -> ");
+        while(iterator.hasNext()){
+            System.out.print(iterator.next() + ",");
+        }
+        System.out.println();
+
+        ListIterator<String> listIterator = arrayList.listIterator();
+        //listIterator.next();
+        //listIterator.add("P");
+        //listIterator.set("T");
+
+        while (listIterator.hasNext()) {
+            listIterator.next();
+        }
+
+        System.out.print("ListIterator -> ");
+        while (listIterator.hasPrevious()){
+            String previous = listIterator.previous();
+            System.out.print(previous + ", ");
+        }
+
+        System.out.println();
+
+        if (listIterator.hasNext()) {
+            String next = listIterator.next();
+            System.out.println(next);
+        }
+
+
 
     }
     public static void test6(){
