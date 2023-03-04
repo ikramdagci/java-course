@@ -5,6 +5,7 @@ import com.course.collections.domain.Person;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class DriverSet {
@@ -15,8 +16,8 @@ public class DriverSet {
     public static void main(String[] args) {
 //        test1();
 //        test2();
-//        test4();
 //        test3();
+//        test4();
 //        test5();
 //        test6();
 //        test7();
@@ -43,6 +44,9 @@ public class DriverSet {
 
     }
 
+    /**
+     *
+     */
     public static void test6(){
         TreeSet<Integer> integers = new TreeSet<>();
         integers.add(4);
@@ -52,7 +56,12 @@ public class DriverSet {
         integers.add(39);
         integers.add(11);
         integers.add(98);
+        integers.remove(98);
         System.out.println(integers);
+
+        HashSet<Character> characters = new HashSet<>();
+        characters.add('a');
+        characters.add('a');
     }
 
     public static String getDuplicatedChars(String s){
