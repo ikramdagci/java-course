@@ -1,0 +1,70 @@
+[05.03.2023 13:14] ERROR Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] INFO Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] INFO Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] ERROR Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] WARNING Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] WARNING Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] ERROR Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] ERROR Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] WARNING Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] ERROR Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] ERROR Driver Something went wrong Caused by: ScreenRenderException
+[05.03.2023 13:14] ERROR Driver Something went wrong Caused by: ScreenRenderException
+
+
+
+
+
+
+
+
+
+
+com.course.exceptions.ex.MyCustomException: Something went wrong
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+Caused by: com.course.exceptions.ex.ScreenRenderException
+	at com.course.exceptions.Driver.main(Driver.java:23)
+com.course.exceptions.ex.MyCustomException: Something went wrong
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+Caused by: com.course.exceptions.ex.ScreenRenderException
+	at com.course.exceptions.Driver.main(Driver.java:23)
+com.course.exceptions.ex.MyCustomException: Something went wrong
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+Caused by: com.course.exceptions.ex.ScreenRenderException
+	at com.course.exceptions.Driver.main(Driver.java:23)
+com.course.exceptions.ex.MyCustomException: Something went wrong
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+	at com.course.exceptions.Driver.main(Driver.java:24)
+Caused by: com.course.exceptions.ex.ScreenRenderException
+	at com.course.exceptions.Driver.main(Driver.java:23)
