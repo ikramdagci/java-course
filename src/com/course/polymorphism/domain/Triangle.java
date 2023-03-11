@@ -1,5 +1,7 @@
 package com.course.polymorphism.domain;
 
+import com.course.reusability.domain.people.Student;
+
 public class Triangle extends Shape {
 
     private int x;
@@ -16,6 +18,11 @@ public class Triangle extends Shape {
     @Override
     public void draw() {
         System.out.println("/\\");
+    }
+
+    @Override
+    public Triangle getShape() { // covariant
+        return this;
     }
 
     @Override

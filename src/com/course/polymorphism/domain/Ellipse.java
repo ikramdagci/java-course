@@ -18,6 +18,11 @@ public class Ellipse extends Shape {
     }
 
     @Override
+    public Ellipse getShape() {
+        return this;
+    }
+
+    @Override
     public void calculateArea() {
         super.area = AreaUtil.calculateEllipseArea(a,b);
     }

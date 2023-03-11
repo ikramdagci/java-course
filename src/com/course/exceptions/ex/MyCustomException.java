@@ -6,6 +6,8 @@ public class MyCustomException extends Exception {
         super(message);
     }
 
-
-
+    @Override
+    public void printStackTrace() {
+        System.out.println("Custom trace");
+    }
 }

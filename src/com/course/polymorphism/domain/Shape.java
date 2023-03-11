@@ -12,9 +12,8 @@ public abstract class Shape {
 
     public abstract void draw();
 
-    public Shape getShape(){ // covariant return types
-        return this;
-    }
+    public abstract Shape getShape(); // covariant return types
+
 
 
     public abstract void calculateArea();
