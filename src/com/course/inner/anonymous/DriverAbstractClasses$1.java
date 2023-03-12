@@ -9,7 +9,12 @@ public class DriverAbstractClasses$1 extends Shape {
 
     public void draw() {
     }
-    
+
+    @Override
+    public Shape getShape() {
+        return this;
+    }
+
     public void calculateArea() {
     }
 }

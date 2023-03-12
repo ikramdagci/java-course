@@ -17,6 +17,11 @@ public class Rectangle extends Shape{
     }
 
     @Override
+    public Rectangle getShape() {
+        return this;
+    }
+
+    @Override
     public void calculateArea() {
         super.area = this.getX() * this.getY();
     }

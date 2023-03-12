@@ -1,7 +1,6 @@
 package com.course.exceptions.domain;
 
 import com.course.exceptions.ex.CalculationException;
-import com.course.exceptions.ex.KmToMConvertException;
 import com.course.exceptions.ex.SalaryCalculationException;
 
 public class DriverLibrary {

@@ -19,6 +19,11 @@ public class Driver {
             public void calculateArea() {
 
             }
+
+            @Override
+            public Shape getShape(){
+                return null;
+            }
         };
         //equals
         Shape shape1 = new DriverAbstractClasses$1("Black");
