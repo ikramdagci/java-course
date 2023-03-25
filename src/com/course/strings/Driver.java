@@ -12,6 +12,8 @@ public class Driver {
         String s = komodoDragon.toString();
         System.out.println(s);
         System.out.println(komodoDragon);
+        int length = "TestStrting".length();
+
 
 
     }

@@ -40,8 +40,6 @@ public class DriverSet {
         people.add(new Person("John2","DZ"));
         people.add(new Person("John3","AC"));
         System.out.println(people);
-
-
     }
 
     /**
