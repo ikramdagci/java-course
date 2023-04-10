@@ -1,6 +1,7 @@
 package com.course.io;
 
 import com.course.io.domain.test.PersonList;
+import com.course.reusability.domain.hr.model.Manager;
 
 import java.io.File;
 
@@ -16,7 +17,9 @@ public class Driver {
 
         // persistence
 
-        testFile();
+        //testFile();
+
+        testPersonPersistence();
 
 
     }

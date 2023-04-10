@@ -6,6 +6,11 @@ public class Employee {
     private String phoneNumber;
     private double salary;
 
+    Department department;
+
+
+
+
     public Employee(String fullName, String phoneNumber, double salary) {
         this.fullName = fullName;
         this.phoneNumber = phoneNumber;
@@ -17,5 +22,12 @@ public class Employee {
         System.out.println("Employee is working...");
     }
 
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "fullName='" + fullName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }

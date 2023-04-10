@@ -19,4 +19,15 @@ public class Manager extends Employee {
     public void setManagingDepartment(Department managingDepartment) {
         this.managingDepartment = managingDepartment;
     }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "email='" + email + '\'' +
+                ", managingDepartment=" + managingDepartment +
+                ", fullName='" + fullName + '\'' +
+                '}';
+    }
+
+
 }

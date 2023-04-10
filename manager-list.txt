@@ -1,0 +1,20 @@
+Manager{"email"="john@company.com", "managingDepartment"=null, "fullName"="John Doe"} -> JSON - Javascript Object Notation
+
+  0        1        2
+John Doe,null,john@company.com
+
+
+XML - eXtented Markup Language -> tag(etiket)
+
+<manager> --root tag
+    <name>John Doe</name>
+    <email>john@company.com</email>
+    <managingDepartment>null</managingDepartment>
+</manager>
+
+
+
+
+
+
+

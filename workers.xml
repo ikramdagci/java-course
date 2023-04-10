@@ -1,0 +1,16 @@
+<workers>
+    <worker>
+        <name>John</name>
+        <surname>Doe</surname>
+        <department>
+            <name>IT</name>
+        </department>
+    </worker>
+    <worker>
+        <name>John</name>
+        <surname>Doe</surname>
+        <department>
+            <name>IT</name>
+        </department>
+    </worker>
+</workers>
