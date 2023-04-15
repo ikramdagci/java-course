@@ -2,6 +2,8 @@ package com.course.reusability.domain.hr.model;
 
 public class Employee {
 
+
+
     protected String fullName;
     private String phoneNumber;
     private double salary;

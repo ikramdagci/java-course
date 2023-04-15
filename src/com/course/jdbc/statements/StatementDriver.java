@@ -25,11 +25,11 @@ public class StatementDriver {
      * commit
      * rollback
      * <p>
-     * ACID
-     * Atomicity
-     * Consistency
-     * Isolation
-     * Durability
+     * <b>ACID</b> <br></br>
+     * Atomicity <br></br>
+     * Consistency <br></br>
+     * Isolation <br></br>
+     * Durability <br></br>
      */
 
     public static void testSelectEmployees() {
@@ -110,12 +110,110 @@ public class StatementDriver {
 
     public static void testSelectEmployeesByIdV2(String id) {
 
-        String queryById = "SELECT * FROM t_employee WHERE employee_id = ?";
+        String queryById = "SELECT * FROM t_employee WHERE first_name = ?";
 
         try (Connection connection = DBDataSource.connect();
              PreparedStatement preparedStatement = connection.prepareStatement(queryById)){
             preparedStatement.setString(1,id);
             ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                String tckn = resultSet.getString("tckn");
+                int employeeId = resultSet.getInt("employee_id");
+                String firstName = resultSet.getString("first_name");
+                int age = resultSet.getInt("age");
+                String lastName = resultSet.getString("last_name");
+                double salary = resultSet.getDouble("salary");
+                System.out.println("Employee -> " + employeeId + " | " + firstName + " | " + lastName + " | " + age + " | " + tckn + " | " + salary);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public static void testCallableStatement(String id) {
+
+        String queryById = "SELECT * FROM t_employee WHERE first_name = ?";
+
+        // Procedure or functions -- Stored Procedure ? Function
+        try (Connection connection = DBDataSource.connect();
+             CallableStatement callableStatement = connection.prepareCall("<procedure_name>")){
+            ResultSet resultSet = callableStatement.executeQuery();
+            while (resultSet.next()) {
+                String tckn = resultSet.getString("tckn");
+                int employeeId = resultSet.getInt("employee_id");
+                String firstName = resultSet.getString("first_name");
+                int age = resultSet.getInt("age");
+                String lastName = resultSet.getString("last_name");
+                double salary = resultSet.getDouble("salary");
+                System.out.println("Employee -> " + employeeId + " | " + firstName + " | " + lastName + " | " + age + " | " + tckn + " | " + salary);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public static void testSelectEmployeesByIdV3(String id) {
+
+        String queryById = "SELECT * FROM t_employee WHERE first_name = ? AND last_name = ? AND age > ?";
+
+        try (Connection connection = DBDataSource.connect();
+             PreparedStatement preparedStatement = connection.prepareStatement(queryById)){
+            preparedStatement.setString(1,"John");
+            preparedStatement.setString(2,"Doe");
+            preparedStatement.setInt(3,18);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                String tckn = resultSet.getString("tckn");
+                int employeeId = resultSet.getInt("employee_id");
+                String firstName = resultSet.getString("first_name");
+                int age = resultSet.getInt("age");
+                String lastName = resultSet.getString("last_name");
+                double salary = resultSet.getDouble("salary");
+                System.out.println("Employee -> " + employeeId + " | " + firstName + " | " + lastName + " | " + age + " | " + tckn + " | " + salary);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public static void testSelectEmployeesByIdV4(String id) {
+
+        String queryById = "SELECT * FROM t_employee WHERE first_name = %s AND last_name = %s AND age > %d";
+
+        try (Connection connection = DBDataSource.connect();
+             Statement statement = connection.createStatement()){
+
+            ResultSet resultSet = statement.executeQuery(String.format(queryById,"John","Doe",18));
+
+
+            while (resultSet.next()) {
+                String tckn = resultSet.getString("tckn");
+                int employeeId = resultSet.getInt("employee_id");
+                String firstName = resultSet.getString("first_name");
+                int age = resultSet.getInt("age");
+                String lastName = resultSet.getString("last_name");
+                double salary = resultSet.getDouble("salary");
+                System.out.println("Employee -> " + employeeId + " | " + firstName + " | " + lastName + " | " + age + " | " + tckn + " | " + salary);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public static void testStatamentMethods(String id) {
+
+        String queryById = "SELECT * FROM t_employee WHERE first_name = %s AND last_name = %s AND age > %d";
+
+        try (Connection connection = DBDataSource.connect();
+             Statement statement = connection.createStatement()){
+
+            ResultSet resultSet = statement.executeQuery(String.format(queryById,"John","Doe",18));
+
+
             while (resultSet.next()) {
                 String tckn = resultSet.getString("tckn");
                 int employeeId = resultSet.getInt("employee_id");
