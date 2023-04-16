@@ -10,6 +10,8 @@ import java.sql.Statement;
 
 public class DepartmentManagementOverResultSet {
 
+    // CRUD Operations
+
     private ResultSet departmentResultSet;
     private ResultSet employeeResultSet;
 
@@ -32,7 +34,7 @@ public class DepartmentManagementOverResultSet {
             while (departmentResultSet.next()){
                 if(departmentResultSet.getInt("department_id") == id){
                     System.out.println(departmentResultSet.getString("department_name"));
-                   // new Department(departmentResultSet.getInt("department_id"), departmentResultSet.getString("department_name"),null);
+                   //new Department(departmentResultSet.getInt("department_id"), departmentResultSet.getString("department_name"),null);
                     return;
                 }
             }
