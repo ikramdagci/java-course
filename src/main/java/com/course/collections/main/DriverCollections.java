@@ -2,7 +2,6 @@ package com.course.collections.main;
 
 import com.course.collections.domain.Apple;
 import com.course.collections.domain.Orange;
-import com.sun.corba.se.impl.orbutil.graph.GraphImpl;
 
 import java.util.*;
 
@@ -140,8 +139,7 @@ public class DriverCollections {
 
     public static void test3(){
         ArrayList<String> list = new ArrayList<>();
-        list.indexOf(new Object());
-        Collection<String> list2 = new GraphImpl();
+        list.indexOf(new Object());;
 
     }
 
