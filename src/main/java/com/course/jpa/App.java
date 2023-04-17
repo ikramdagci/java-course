@@ -14,8 +14,8 @@ import javax.persistence.EntityTransaction;
 public class App {
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        testHibernate();
-        //testJpaSetup();
+//        testHibernate();
+        testJpaSetup();
     }
 
     public static void testHibernate(){
